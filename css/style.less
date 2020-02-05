@@ -1,23 +1,35 @@
+// variebles.less
+@tablet-width: 680px;
+@font-size: 16px;
+
+
+// mixins.less
 .font {
   font-size: 16px;
   line-height: 27px;
   font-family: "Arial", sans-serif;
   color: #f7f4f1;
 }
+
+
+// scaffolding.less
 body {
-  font-size: 16px;
-  line-height: 27px;
-  font-family: "Arial", sans-serif;
-  color: #f7f4f1;
+  .font;
 }
+
+
+
+// page-header.less
 .page-header {
   display: flex;
   flex-direction: column;
 }
+
 .page-header__logo {
   height: 85px;
 }
-@media (min-width: 680px) {
+
+@media (min-width: @tablet-width) {
   .page-header__logo {
     order: 2;
     height: 400px;
