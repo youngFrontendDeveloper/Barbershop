@@ -1,37 +1,163 @@
-// variebles.less
+// Файл variebles.less
 @tablet-width: 680px;
+@desktop-width: 1200px;
 @font-size: 16px;
 
 
-// mixins.less
-.font {
+
+// Файл mixins.less
+.border() {
+  border: 1px solid #cccccc;
+}
+.font() {
   font-size: 16px;
   line-height: 27px;
   font-family: "Arial", sans-serif;
-  color: #f7f4f1;
+  // color: #f7f4f1;
 }
 
+.no-outline() {
+  outline: none;
+  background: transparent;
 
-// scaffolding.less
+  &::before {
+    display: none;
+  }
+}
+
+//Файл scaffolding.less
 body {
-  .font;
+  .font();
+}
+
+.visualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
 }
 
 
 
-// page-header.less
+//Файл blocks/page-header.less
 .page-header {
   display: flex;
   flex-direction: column;
-}
-
-.page-header__logo {
-  height: 85px;
+  &__logo {
+    height: 85px;
+    .border();
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-header__logo {
     order: 2;
     height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
+
+
+//Файл blocks/main-nav.less
+
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+  .border();
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .border();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      width: 640px;
+      margin: 0 auto;
+    }
+  }
+
+  .site-list {
+    width: 570px;
+    .border();
+  }
+
+  .user-list {
+    width: 60px;
+    .border();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 960px;
+  }
+
+  .site-list {
+    width: 780px;
+  }
+
+  .user-list {
+    width: 160px;
+  }
+}
+
+
+//Файл blocks/stats.less
+
+.stats {
+  width: 320px;
+  margin: 0 auto;
+  .border();
+
+  &__header {
+    padding: 30px 40px 25px;
+    .border();
+  }
+
+  &__list {
+    width: 100%;
+    .border();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .stats {
+    width: 640px;
+    margin-top: -185px;
+
+    &__list {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    display: flex;
+    width: 960px;
+    margin-top: -160px;
+
+    &__header {
+      width: 240px;
+    }
+
+    &__list {
+      width: 640px;
+    }
   }
 }
