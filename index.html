@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="windows-1225">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>New Barbershop</title>
 </head>
 <body>
+  <!-- ++++++++++ PAGE-HEADER ++++++++++++ -->
   <header class="page-header">
     <a href="#" class="page-header__logo">
-      <img src="img/logotype-mobile.svg" alt="Барбершоп 'Бородинский'" class="page-header__logo-image" width="226" height="30" >
+
+      <img class="page-header__logo-image" src="img/logotype-mobile.png" alt="Барбершоп 'Бородинский'" width="226" height="30" >
+
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a href="#">Главная</a></li>
-          <li class="site-list__item"><a href="#">Наши работы</a></li>
-          <li class="site-list__item"><a href="#">Записаться</a></li>
-          <li class="site-list__item"><a href="#">Контакты</a></li>
-          <li class="site-list__item"><a href="#">HTML Academy</a></li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a href="login.html" class="user-list__login">Войти</a>
-          </li>
-        </ul>
+      <div class="main-nav__menu-mobail">
+        <p class="main-nav__text">Главная</p>
+        <button class="main-nav__toggle open" type="button">Открыть меню</button>
       </div>
+      <div class="main-nav__menu-top">
+        <!-- <div class="main-nav__wrapper"> -->
+          <button class="main-nav__toggle close" type="button">Закрыть</button>
+          <div class="main-nav__lists-container">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item site-list__item--active"><a class="main-nav__link" href="#">Главная</a></li>
+              <li class="site-list__item"><a class="main-nav__link" href="#">Наши работы</a></li>
+              <li class="site-list__item"><a class="main-nav__link" href="#">Записаться</a></li>
+              <li class="site-list__item"><a class="main-nav__link" href="#">Контакты</a></li>
+              <li class="site-list__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+            </ul>
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="main-nav__link user-list__login" href="login.html">Войти</a>
+              </li>
+            </ul>
+          </div>
+        </div>  <!-- end .wrapper-->
+      </div> <!-- end .main-nav__menu-top-->
     </nav>
   </header>
 
+  <!-- ++++++++++ PAGE-MAIN ++++++++++++ -->
   <main class="page-main">
     <h1 class="visualy-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
+
+    <!-- ++++++++++ stats ++++++++++++ -->
     <section class="stats">
       <header class="stats__header">
         <h2 class="visualy-hidden">Статистика Барбершопа</h2>
@@ -62,6 +77,8 @@
       </table>
       <small class="stats__legend stats__legend--bottom"><sup>*</sup> - приведенные данные ложь</small>
     </section>
+
+    <!-- ++++++++++ advantages ++++++++++++ -->
     <section class="advantages">
       <div class="advantages__wrapper slider">
         <h2 class="visualy-hidden">Наши преимущества</h2>
@@ -86,6 +103,9 @@
       </p>
       </div>
     </section>
+
+
+    <!-- ++++++++++ news ++++++++++++ -->
     <section class="news">
       <div class="news__wrapper">
         <h2 class="news__title">Новости и акции</h2>
@@ -112,6 +132,8 @@
       <a href="#" class="news__to-all button">Показать все</a>
       </div>
     </section>
+
+    <!-- ++++++++++ reviews ++++++++++++ -->
     <section class="reviews">
       <div class="reviews__wrapper slider">
         <h2 class="reviews_title">Отзывы о нас</h2>
@@ -149,8 +171,12 @@
       </div>
     </section>
   </main>
+
+  <!-- ++++++++++ PAGE-FOOTER ++++++++++++ -->
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+
+      <!-- ++++++++++ contacts ++++++++++++ -->
       <div class="page-footer__contacts contacts">
         <b class="contacts__title">Барбершоп "Бородинский"</b>
         <p class="contacts__text">
@@ -160,6 +186,8 @@
           </a>
         </p>
       </div>
+
+      <!-- ++++++++++ social ++++++++++++ -->
       <div class="footer-page__social social">
         <b class="social__title">Давайте дружить!</b>
         <ul class="social__list">
@@ -174,6 +202,8 @@
           </li>
         </ul>
       </div>
+
+      <!-- ++++++++++ copyright ++++++++++++ -->
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
         <a href="#" class="copyright__link button">HTML Academy</a>
