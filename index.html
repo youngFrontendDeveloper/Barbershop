@@ -17,12 +17,11 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-      <div class="main-nav__menu-mobail">
-        <p class="main-nav__text">Главная</p>
-        <button class="main-nav__toggle open" type="button">Открыть меню</button>
-      </div>
-      <div class="main-nav__menu-top">
-        <!-- <div class="main-nav__wrapper"> -->
+        <div class="main-nav__menu-mobail">
+          <p class="main-nav__text">Главная</p>
+          <button class="main-nav__toggle open" type="button">Открыть меню</button>
+        </div>
+        <div class="main-nav__menu-top visualy-hidden">
           <button class="main-nav__toggle close" type="button">Закрыть</button>
           <div class="main-nav__lists-container">
             <ul class="main-nav__list site-list">
@@ -38,8 +37,8 @@
               </li>
             </ul>
           </div>
-        </div>  <!-- end .wrapper-->
-      </div> <!-- end .main-nav__menu-top-->
+        </div>  <!-- end .main-nav__menu-top-->
+      </div>   <!-- end .wrapper-->
     </nav>
   </header>
 
@@ -51,29 +50,31 @@
     <section class="stats">
       <header class="stats__header">
         <h2 class="visualy-hidden">Статистика Барбершопа</h2>
-        <b class="stats__slogan">Стрижка у нас - это выгодно!</b>
-        <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+        <p class="stats__slogan title">Стрижка у нас - это выгодно!</p>
+        <p class="stats__intro text">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
         <small class="stats__legend stats__legend--top">
           <sup>*</sup> - приведенные данные ложь
         </small>
       </header>
-      <table class="stats__list">
-        <tr>
-          <td class="stats__value">1 500<sup>*</sup></td>
-          <td class="stats__field">рублей<br>вложений</td>
-        </tr>
-        <tr>
-          <td class="stats__value">7 200</td>
-          <td class="stats__field">секунд<br>времени мастера</td>
-        </tr>
-        <tr>
-          <td class="stats__value">90 000</td>
-          <td class="stats__field">постриженных<br>волос</td>
-        </tr>
-        <tr>
-          <td class="stats__value">500 000<sup>*</sup></td>
-          <td class="stats__field">лайков и<br>комплиментов</td>
-        </tr>
+      <table class="stats__table">
+        <tbody class="stats__list">
+          <tr class="stats__row row1">
+            <td class="stats__value">1 500<sup>*</sup></td>
+            <td class="stats__field">рублей вложений</td>
+          </tr>
+          <tr class="stats__row row2">
+            <td class="stats__value">7 200</td>
+            <td class="stats__field">секунд времени мастера</td>
+          </tr>
+          <tr class="stats__row row3">
+            <td class="stats__value">90 000</td>
+            <td class="stats__field">постриженных волос</td>
+          </tr>
+          <tr class="stats__row row4">
+            <td class="stats__value">500 000<sup>*</sup></td>
+            <td class="stats__field">лайков и комплиментов</td>
+          </tr>
+        </tbody>
       </table>
       <small class="stats__legend stats__legend--bottom"><sup>*</sup> - приведенные данные ложь</small>
     </section>
@@ -84,16 +85,16 @@
         <h2 class="visualy-hidden">Наши преимущества</h2>
       <ul class="advantages__list slider__list">
         <li class="advantages__item advantages__item--fast slider__item">
-          <h3 class="advantages__title">Быстро</h3>
-          <p class="advantages__description">Мы делаем свою работу быстро!</p>
+          <h3 class="advantages__title title--white">Быстро</h3>
+          <p class="advantages__description text--white">Мы делаем свою работу быстро!</p>
         </li>
         <li class="advantages__item advantages__item--cool slider__item">
-          <h3 class="advantages__title">Круто</h3>
-          <p class="advantages__description">Забудьте, как Вы стриглись раньше.</p>
+          <h3 class="advantages__title title--white">Круто</h3>
+          <p class="advantages__description text--white">Забудьте, как Вы стриглись раньше.</p>
         </li>
         <li class="advantages__item advantages__item--price slider__item">
-          <h3 class="advantages__title">Дорого</h3>
-          <p class="advantages__description">Наши мастера - профессионалы своего дела</p>
+          <h3 class="advantages__title title--white">Дорого</h3>
+          <p class="advantages__description text--white">Наши мастера - профессионалы своего дела</p>
         </li>
       </ul>
       <p class="advantes__toggles slider__toggles">
@@ -108,7 +109,7 @@
     <!-- ++++++++++ news ++++++++++++ -->
     <section class="news">
       <div class="news__wrapper">
-        <h2 class="news__title">Новости и акции</h2>
+        <h2 class="news__title title">Новости и акции</h2>
       <ul class="news__list">
         <li class="news__item">
           <time class="news__date" datetime="2017-09-29">
@@ -136,7 +137,7 @@
     <!-- ++++++++++ reviews ++++++++++++ -->
     <section class="reviews">
       <div class="reviews__wrapper slider">
-        <h2 class="reviews_title">Отзывы о нас</h2>
+        <h2 class="reviews_title title">Отзывы о нас</h2>
         <a href="#" class="review__write button">Оставить свой</a>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
