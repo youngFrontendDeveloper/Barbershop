@@ -104,7 +104,7 @@ img {
 @media (min-width: 680px) {
   .page-header {
     height: 469px;
-    background: yellow;
+    background: #000000 url(../img/back-tablet.jpg) no-repeat center;
   }
   .page-header__logo {
     -webkit-box-ordinal-group: 3;
@@ -115,6 +115,7 @@ img {
 @media (min-width: 1200px) {
   .page-header {
     height: 720px;
+    background: #000000 url(../img/back-desktop.jpg) no-repeat center;
   }
   .page-header__logo {
     margin: 130px auto 279px;
@@ -381,7 +382,7 @@ img {
   background-color: #353535;
 }
 .stats__value {
-  padding: 23px 20px;
+  padding: 23px 0 20px;
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
@@ -480,10 +481,81 @@ img {
   }
 }
 .advantages {
-  margin-top: -199px;
+  min-width: 320px;
   background-color: #353535;
+}
+.advantages__wrapper {
+  margin: 0 auto;
+}
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.advantages__item {
+  width: 100%;
+  padding: 44px 20px 35px;
+  box-sizing: border-box;
+}
+.advantages__item--fast {
+  background: url(../img/advantage-1-illustration.svg.png) no-repeat center 44px;
+}
+.advantages__item--cool {
+  background: url(../img/advantage-2-illustration.svg.png) no-repeat center 44px;
+}
+.advantages__item--price {
+  background: url(../img/advantage-3-illustration.svg.png) no-repeat center 44px;
+}
+.advantages__title {
+  margin: 152px 0 20px;
+}
+.advantages__description {
+  margin-bottom: 21px;
 }
 .slider__list {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 680px) {
+  .advantages {
+    min-width: 768px;
+    margin-top: -395.97px;
+  }
+  .advantages__wrapper {
+    min-width: 640px;
+    padding: 396px 0 0;
+  }
+  .advantages__list {
+    width: 640px;
+    margin: 0 auto;
+  }
+  .advantages__item {
+    min-width: 640px;
+    padding: 0 0 38px 160px;
+    border-bottom: 1px solid #4a4a4a;
+  }
+  .advantages__item--fast,
+  .advantages__item--cool,
+  .advantages__item--price {
+    background-position: 30px center;
+  }
+  .advantages__title {
+    margin: 43px 0 23px;
+  }
+  .advantages__description {
+    margin-bottom: 39px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages {
+    margin-top: -199px;
+  }
+  .advantages__wrapper {
+    min-width: 960px;
+    padding: 238px 0 0;
+  }
+  .advantages__item {
+    min-width: 320px;
+    padding: 129px 40px 45px;
+  }
 }
